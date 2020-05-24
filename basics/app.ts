@@ -8,8 +8,10 @@ const addNumbers = (
 };
 
 const n1 = 5;
-const n2 = 1.5;
+const n2 = 2.5;
 const logResult = true;
 const message = "Your result is: ";
 
 addNumbers(n1, n2, logResult, message);
+
+// hello

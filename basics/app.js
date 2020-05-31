@@ -1,4 +1,4 @@
-"use strict";
+// Simple types (numbers, booleans, strings)
 var addNumbers = function (n1, n2, logResult, message) {
     logResult ? console.log("" + message + (n1 + n2)) : n1 + n2;
 };
@@ -7,19 +7,25 @@ var n2 = 2.5;
 var logResult = true;
 var message = "Your result is: ";
 addNumbers(n1, n2, logResult, message);
+// Object types
 var car = {
     brand: "Volkswagen",
-    hp: 120,
+    hp: 120
 };
 console.log(car.brand);
+// Arrays
 var cars;
 cars = ["Volkswagen", "Audi"];
 for (var _i = 0, cars_1 = cars; _i < cars_1.length; _i++) {
     var car_1 = cars_1[_i];
+    // Here TS knows that the car is a string
+    // and can use string methods in a secure way
     console.log(car_1.toUpperCase());
 }
+// Tuple
 var tuple;
 tuple = [1, "string"];
+// Enum
 var myCarColor;
 (function (myCarColor) {
     myCarColor[myCarColor["Blue"] = 0] = "Blue";
@@ -29,9 +35,10 @@ var myCarColor;
 var myCar = {
     brand: "Ford",
     hp: 95,
-    color: myCarColor.Blue,
+    color: myCarColor.Blue
 };
 if (myCar.color === myCarColor.Blue) {
     console.log("my car is Blue");
 }
+// Any
 var anyType;
